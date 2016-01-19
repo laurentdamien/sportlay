@@ -1,0 +1,149 @@
+.home{
+    /* CSS for the the match of the day */
+    .pronoDay{
+        background: -webkit-radial-gradient(ellipse at center center, #0F4063, #101B23);
+        background: -moz-radial-gradient(ellipse at center center, #0F4063, #101B23);
+        background: -o-radial-gradient(ellipse at center center, #0F4063, #101B23);
+        background: radial-gradient(ellipse at center center, #0F4063, #101B23);
+
+        position: relative;
+        min-height: 700px;
+        padding-top: 12%;
+
+        .map{
+            position: absolute;
+            top: 0px;
+            right: 0;
+            width: 45%;
+            z-index: 1;
+        }
+    }
+    
+    /* CSS for the advice of the day */
+    .advice{
+        @include linearGradient(#FFFFFF, #EEEEEE);
+        
+        padding: 40px 0 0;
+        
+        p{
+            font-size: 1.15rem;
+            margin-top: 30px;
+        }
+    }
+    
+    /* CSS for the others matchs of the day */
+    .otherPronos{
+        @include linearGradient(#EEEEEE, #EEEEEE);
+        
+        padding: 80px 0;
+        
+        .filters>ul>li{
+            .filter{
+                width: 110px;
+                margin-left: auto;
+                background-color: #FFFFFF;
+                background-repeat: no-repeat;
+                background-size: auto 20px;
+                background-position: 20% 50%;
+                color: #000000;
+                border-radius: 5px;
+                padding: 10px 30px 10px 0;
+                
+                -webkit-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+                -o-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+                box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+
+                @include transition(background, 0.5);
+            }
+            
+            .filterAll{
+                background-size: auto 25px;
+                background-image: url('../img/coin_color.png');
+                
+                &:hover{
+                    @include filter(#000000, coin_white);
+                    @include transition(all, 0.5);
+                }
+            }
+            
+            .styleAll{
+                @include filter(#000000, coin_white);
+            }
+            
+            .filterReliability{
+                padding: 10px 15px 10px 0;
+                background-image: url('../img/fiable_color.png');
+                
+                &:hover{
+                    @include filter(#1ED711, fiable_white);
+                    @include transition(all, 0.5);
+                }
+            }
+            
+            .styleReliability{
+                @include filter(#1ED711, fiable_white);
+            }
+            
+            .filterRacy{
+                background-image: url('../img/ose_color.png');
+                
+                &:hover{
+                    @include filter(#FF8D00, ose_white);
+                }
+            }
+            
+            .styleRacy{
+                @include filter(#FF8D00, ose_white);
+            }
+            
+            .filterFun{
+                background-size: auto 25px;
+                background-image: url('../img/fun_color.png');
+                
+                &:hover{
+                    @include filter(#D0021B, fun_white);
+                }
+            }
+            
+            .styleFun{
+                @include filter(#D0021B, fun_white);
+            }
+        }
+        
+        .singleProno{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cardMatch{
+            width: 95%;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .noMatch{
+            margin: 157px auto;
+            width: 205%;
+        }
+    }
+    
+    /* CSS for the tickets of day */
+    .ticketsProno{
+        @include linearGradient(#EEEEEE, #FFFFFF);
+
+        padding: 80px 0;
+        
+        .listTickets{
+            margin-top: 50px;
+            
+            .cardTicket{
+                .bgWhite,
+                .bgGray{
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.advices{
+    .content{
+        padding-top: 150px;
+        
+        input[type="submit"]{
+            @include btnSubmit();
+            
+            margin: 0 0 20px;
+        }
+        
+        tr td{
+            vertical-align: middle;
+        }
+    }
+    
+    .contentAdvices{
+        margin-top: 80px;
+    }
+    
+    .listAdvices{
+        width: 80%;
+        margin: auto;
+        
+        table>tbody>tr{
+            cursor: pointer;
+            
+            th{
+                width: 35%;
+                
+                &.mediumCase{
+                    width: 12%;
+                }
+                
+                &.littleCase{
+                    width: 6%;
+                }
+            }
+            
+            td{
+                p.idAdvice{
+                    margin: 0;
+                }
+                
+                .editAdvice{
+                    margin-top: 10px;
+                }
+                
+                p.editAdvice{
+                    padding: 7px 10px 4px;
+                    font-size: 0.85rem;
+                    border-radius: 3px;
+                    background-color: #ABAECD;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

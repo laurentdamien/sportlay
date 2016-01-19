@@ -1,0 +1,425 @@
+/* MEDIA QUERIES */
+@media screen and (max-width: 1250px) {
+    @include controls(25, 25);
+    
+    .statsFull div.statsFullDetails table.table{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home .pronoDay>div.matchOfTheDay,
+    .prognostic .pronoDay>div.matchOfTheDay{
+        width: 45%;
+    }
+    
+    @include controls(10, 10);
+    
+    .statsFull div.statsFullDetails table.table{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    @include controls(20, 20);
+    
+    .statsFull div.statsFullDetails table.table{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+    .home .pronoDay>div.matchOfTheDay,
+    .prognostic .pronoDay>div.matchOfTheDay{
+        width: 55%;
+    }
+    
+    .otherPronos{
+        .cardMatch{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .noMatch{
+            width: 100%;
+        }
+    } 
+    
+    @include controls(15, 15);
+    
+    .rankingFull div.rankingFullDetails:before{
+        left: 47.5%;
+    }
+    
+    .statsFull div.statsFullDetails{
+        table.table{
+            width: 65%;
+        }
+        
+        &:before {
+            left: 47.5%;
+        }
+    }
+    
+    .ticketDay{
+        .statsFull div.statsFullDetails{
+            table.table{
+                width: 80%;
+
+                tbody>tr>td{
+                    &.bigCase{
+                        width: 20%;
+                    }
+
+                    &.mediumCase{
+                        width: 22%;
+                    }
+
+                    &.roundCase{
+                        width: 6%;
+                    }
+                }
+            }
+
+            .desktop{
+                display: none;
+            }
+
+            .mobile{
+                display: table-cell;
+            }
+        }
+        
+        .rankingFull div.rankingFullDetails{
+            table.table{
+                .borderR {
+                    border-right: 0 none;
+                }
+            }
+            
+            .mobile{
+                display: none;
+            }
+        }
+        
+        .lastResultsTeams{
+            table.table tr.oldMatch{
+                td{
+                    &.hour{
+                        display: none;
+                    }
+
+                    &.smallCase{
+                        width: 15%;
+                    }
+                }
+            }
+        }
+    } 
+    
+    .lastResultsTeams{
+        table.table tr.oldMatch{
+            td{
+                &.desktop{
+                    display: none;
+                }
+
+                &.mobile{
+                    display: table-cell;
+                }
+            }
+        }
+        
+        >div{
+            &:first-child{
+                @include flexDirection(column);
+            }
+            
+            >div{
+                &:first-child{
+                    margin-right: 0;
+                    margin-bottom: 50px;
+                }
+                
+                &:last-child{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contentCGU>section>*{
+        width: 70%;
+    }
+    
+    .home .pronoDay>div.matchOfTheDay,
+    .prognostic .pronoDay>div.matchOfTheDay{
+        width: 65%;
+    }
+    
+    .ticketDay .analysis{
+        margin-bottom: 20px;
+    }
+    
+    .otherPronos{
+        .filters>ul>li>.filter{
+            margin-right: auto;
+        }
+        
+        .cardMatch{
+            width: 85%;
+        }
+        
+        .singleProno{
+            width: 90%;
+        }
+    }
+    
+    @include controls(30, 30);
+    
+    .match .col-xs-2,
+    .match .col-xs-1{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .statsFull div.statsFullDetails table.table{
+        width: 80%;
+    }
+    
+    .rankingFull div.rankingFullDetails{
+        table.table{
+            width: 80%;
+            
+            .borderR {
+                border-right: 1px solid #DDDDDD;
+            }
+        }
+        
+        div.categorieRanking{
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .home .pronoDay>div.matchOfTheDay,
+    .prognostic .pronoDay>div.matchOfTheDay{
+        width: 80%;
+    }
+    
+    @include controls(25, 25);
+    
+    .admin{
+        .content{
+            padding-top: 180px;
+            
+            .contentPronostic,
+            .listTicket{
+                width: 90%;
+            }
+
+            .listMatch{
+                width: 90%;
+
+                .mobile{
+                    display: table-cell;
+                }
+
+                .desktop{
+                    display: none;
+                }
+
+                tr th {
+                    width: 45%;
+
+                    &.littleCase {
+                        width: 10%;
+                    }
+
+                    &.mediumCase {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .advices .content {
+        padding-top: 180px;
+    }
+    
+    .statsFull{
+        div.statsFullDetails{
+            table.table{
+                width: 100%;
+                
+                >tbody>tr>td{
+                    &.bigCase{
+                        width: 20%;
+                    }
+                    
+                    &.mediumCase{
+                        width: 22%;
+                    }
+                    
+                    &.roundCase{
+                        width: 6%;
+                    }
+                }
+                
+                .borderR{
+                    border-right: 0 none;
+                }
+            }
+            
+            .desktop{
+                display: none;
+            }
+            
+            .mobile{
+                display: table-cell;
+            }
+            
+            &:before {
+                left: 46.5%;
+            }
+        }
+    }
+    
+    .rankingFull{
+        div.rankingFullDetails{
+            table.table{
+                width: 90%;
+            }
+            
+            div.categorieRanking{
+                width: 90%;
+            }
+            
+            .mobile{
+                display: none;
+            }
+            
+            &:before {
+                left: 46.5%;
+            }
+        }
+    }
+    
+    .lastResultsTeams{
+        padding: 50px 15px;
+        
+        table.table tr.oldMatch{
+            td{
+                &.hour{
+                    display: none;
+                }
+
+                &.smallCase{
+                    width: 15%;
+                }
+            }
+        }
+    }
+    
+    .ticketDay{
+        #detailsInfosTicket .detailsMatch,
+        .rankingFull div.rankingFullDetails table.table,
+        .statsFull div.statsFullDetails table.table{
+            width: 100%;
+        }
+        
+        .lastResultsTeams{
+            padding: 50px 0;
+            
+            .table{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9,
+    .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9,
+    .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9,
+    .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .row .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .home header a,
+    header>h2{
+        margin-left: 7%;
+    }
+    
+    .contentCGU>section>*{
+        width: 90%;
+    }
+    
+    .home,
+    .prognostic{
+        .pronoDay{
+            padding-top: 180px;
+
+            >div.matchOfTheDay{
+                width: 85%;
+            }
+        }
+    }
+    
+    .otherPronos .cardMatch {
+        width: 100%;
+    }
+    
+    @include controls(0, 0);
+    
+    .ticketDay{
+        padding-top: 180px;
+        
+        .firstMatch p{
+            line-height: 50px;
+        }
+    }
+    
+    .match .nameTeam{
+        font-size: 0.8rem;
+    }
+    
+    .pennant{
+        max-height: 50px;
+        max-width: 50px;
+    }
+    
+    .biography .hobbiesAndWork,
+    .biography .whyThisSite{
+        display: block;
+    }
+    
+    .statsFull div.statsFullDetails{
+        &:before {
+            left: 44.5%;
+        }
+    }
+    
+    .rankingFull div.rankingFullDetails{
+        table.table,
+        div.categorieRanking{
+            width: 100%;
+        }
+        
+        &:before {
+            left: 44.5%;
+        }
+    }
+}

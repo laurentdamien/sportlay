@@ -1,0 +1,60 @@
+.prognostic{
+    .pronoDay{
+        position: relative;
+        height: 100%;
+        padding-top: 140px;
+
+        .matchOfTheDay{
+            width: 40%;
+        }
+
+        .homeColor{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            z-index: 1;
+            left: 0;
+        }
+
+        .awayColor{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            z-index: 1;
+            right: 0;
+        }
+    }
+    
+    .ranking{
+        @include linearGradient(#FFFFFF, #EEEEEE);
+        
+        padding: 50px 0;
+    }
+    
+    .lastResults{
+        background-color: #EEEEEE;
+        padding: 50px 0;
+    }
+    
+    .lastResultsTeams{
+        @include linearGradient(#EEEEEE, #FFFFFF);
+        
+        padding: 50px 40px;
+        
+        &>div{
+            @include flex();
+            @include flexDirection(row);
+            @include justifyContent(center);
+        }
+    }
+    
+    .lastResultsHomeTeam{
+        margin-right: 20px;
+    }
+
+    .lastResultsAwayTeam{
+        margin-left: 20px;
+    }
+}

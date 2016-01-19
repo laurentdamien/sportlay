@@ -1,0 +1,188 @@
+@mixin flex () {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+}
+
+@mixin flexSize ($s) {
+    flex: $s;
+    -webkit-flex: $s;
+    -moz-flex: $s;
+    -ms-flex: $s;
+}
+
+@mixin flexDirection ($d) {
+    flex-direction: $d;
+    -webkit-flex-direction: $d;
+    -moz-flex-direction: $d;
+    -ms-flex-direction: $d;
+}
+
+@mixin justifyContent ($d) {
+    justify-content: $d;
+    -webkit-justify-content: $d;
+    -moz-justify-content: $d;
+    -ms-justify-content: $d;
+}
+
+@mixin alignItems ($d) {
+    align-items: $d;
+    -webkit-align-items: $d;
+    -moz-align-items: $d;
+    -ms-align-items: $d;
+}
+
+@mixin transition ($c, $t) {
+    transition: $c #{$t}s;
+    -webkit-transition: $c #{$t}s;
+    -moz-transition: $c #{$t}s;
+    -o-transition: $c #{$t}s;
+}
+
+@mixin translate ($a, $b) {
+    transform: translate(#{$a}%, #{$b}%);
+    -webkit-transform: translate(#{$a}%, #{$b}%);
+    -moz-transform: translate(#{$a}%, #{$b}%);
+    -ms-transform: translate(#{$a}%, #{$b}%);
+}
+
+@mixin linearGradient ($a, $b) {
+    background-color: -webkit-linear-gradient($a, $b);
+    background: -moz-linear-gradient($a, $b);
+    background: -o-linear-gradient($a, $b);
+    background: linear-gradient($a, $b);
+}
+
+@mixin card () {
+    -webkit-box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    -ms-box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-top: 30px;
+    margin-top: 40px;
+    
+    @include transition(all, 0.2);
+}
+
+@mixin cardHover($x, $y, $z, $a){
+    -webkit-box-shadow: $x+'px' $y+'px' $z+'px' rgba(0,0,0,$a);
+    -moz-box-shadow: #{$x}px #{$y}px #{$z}px rgba(0,0,0,$a);
+    -ms-box-shadow: #{$x}px #{$y}px #{$z}px rgba(0,0,0,$a);
+    box-shadow: #{$x}px #{$y}px #{$z}px rgba(0,0,0,$a);
+
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+
+    @include transition(all, 0.2);
+}
+
+@mixin quotation () {
+    font-size: 1.2rem;
+    font-family: metaMedium;
+    margin-bottom: 0;
+    width: 40px;
+    padding: 12px 0 4px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50% 50% 0 0;
+}
+
+@mixin statsContent () {
+    padding: 0 3px;
+    min-height: 200px;
+    
+    @include flex();
+    @include flexDirection(column);
+    @include justifyContent(center);
+    @include alignItems(center);
+}
+
+@mixin button(){
+    text-decoration: none;
+    cursor: pointer;
+    margin: auto;
+    color: #FFFFFF;
+    background-color: #222222;
+    background-repeat: no-repeat;
+    background-size: auto 20px;
+    border-radius: 5px;
+    padding: 12px 30px;
+    -webkit-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    
+    @include transition(background, 0.5);
+    
+    &:hover{
+        text-decoration: none;
+        background-color: #222222;
+        color: #FFFFFF;
+        box-shadow: none;
+
+        @include transition(all, 0.2);
+    }
+}
+
+@mixin btnSubmit(){
+    background-color: #EEEEEE;
+    color: #222222;
+    border: 1px solid #ABAECD;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 25px;
+
+    @include transition(all, 0.2);
+    
+    &:focus{
+        outline-offset: 0;
+        outline: 0;
+    }
+    
+    &:hover{
+        background-color: #ABAECD;
+        
+        @include transition(all, 0.2);
+    }
+}
+
+@mixin roundWin() {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    
+    .roundWinAway{
+        margin: auto auto auto 0;
+    }
+    
+    .roundWinHome{
+        margin: auto 0 auto auto;
+    }
+}
+
+@mixin filter($color, $icon){
+    box-shadow: none;
+    color: #FFFFFF;
+    background-color: $color;
+    background-image: url('../img/#{$icon}.png');
+}
+
+@mixin controls($left, $right){
+    .owl-controls .owl-buttons{
+        div.owl-prev{
+            left: #{$left}px;
+        }
+
+        div.owl-next{
+            right: #{$right}px;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.ticketDay{
+    position: relative;
+    height: 100%;
+    padding: 140px 25px 0;
+    
+    @include linearGradient(#EEEEEE, #FFFFFF);
+    
+    &>div.row{
+        margin-top: 40px;
+    }
+    
+    #detailsInfosTicket{
+        #listTicket{
+            &.posFixed{
+                position: fixed;
+                top: 40px;
+                left: 25px;
+                z-index: 10;
+            }
+            
+            .matchTicket:hover{
+                cursor: pointer;
+                background-color: #DDDDDD;
+            }
+        }
+        
+        .detailsMatch{
+            margin: auto;
+            width: 80%;
+            
+            .cardDetailsMatch{
+                margin-top: 0;
+            }
+        }
+    }
+    
+    .analysis{
+        padding: 20px;
+        
+        &>p{
+            margin: 0;
+        }
+    }
+    
+    .firstMatch{
+        padding: 20px;
+        
+        img{
+            display: block;
+            margin: auto auto auto 0;
+        }
+        
+        p{
+            line-height: 70px;
+        }
+        
+        &>div{
+            margin: auto;
+            
+            &.row>div:first-child img{
+                margin: auto 0 auto auto;
+            }
+        }
+    }
+    
+    .rankingFull .rankingFullDetails{
+        .categorieRanking,
+        .table{
+            width: 80%;
+        }
+    }
+    
+    .statsFull .statsFullDetails .table{
+        width: 80%;
+    }
+    
+    .lastResultsTeams{
+        margin-bottom: 50px;
+            
+        .table{
+            width: 80%;
+            margin: auto auto 20px;
+        }
+        
+        &>div>div{
+            margin: auto auto 40px;
+        }
+    }
+    
+    .lastResults{
+        margin: 80px auto;
+    }
+}

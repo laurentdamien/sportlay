@@ -1,0 +1,143 @@
+.admin{
+    .content{
+        padding-top: 150px;
+        
+        h2{
+            margin-top: 80px;
+        }
+        
+        .listMatch{
+            .mobile{
+                display: none;
+            }
+        }
+        
+        .contentPronostic{
+            width: 30%;
+            margin: 30px auto 50px;
+            
+            .panel{
+                padding: 0;
+                background-color: transparent;
+                
+                .panel-heading h4{
+                    margin: 0;
+                    
+                    a:focus{
+                        color: inherit;
+                    }
+                }
+            }
+            
+            select{
+                border-radius: 5px;
+                
+                &[name='championship']{
+                    width: 155px;
+                }
+            }
+            
+            .selectColors{
+                margin: 0 0 1rem 0;
+                
+                .cs-options li{
+                    padding: 10px;
+                    border-bottom: 1px solid #FFFFFF;
+                    border-top: 1px solid #FFFFFF;
+                }
+            }
+        }
+        
+        input{
+            border-radius: 5px;
+
+            &[type="submit"]{
+                @include btnSubmit();
+
+                margin: 0 0 20px;
+            }
+        }
+        
+        .tableTicket{
+            tr th{
+                width: 68%;
+
+                &.littleCase{
+                    width: 16%;
+                }
+            }
+        }
+        
+        #collapseAddTicket select{
+            width: 50%;
+        }
+        
+        .listMatch{
+            width: 80%;
+            margin: auto;
+            
+            table>tbody>tr{
+                cursor: pointer;
+                
+                td{
+                    p.idMatch{
+                        margin: 0;
+                    }
+                }
+                
+                div.contentEditResult{
+                    @include flex();
+                    
+                    input{
+                        margin: 10px 1px 0;
+                        padding: 0;
+                    }
+                }
+                
+                .editMatch{
+                    margin-top: 10px;
+                }
+                
+                p.editMatch{
+                    padding: 7px 10px 4px;
+                    font-size: 0.85rem;
+                    border-radius: 3px;
+                    background-color: #ABAECD;
+                    color: #FFFFFF;
+                    
+                    &.mobile{
+                        width: 50%;
+                        margin: 10px auto 0;
+                    }
+                }
+                
+                input[type="checkbox"]{
+                    margin: 0;
+                }
+            }
+        }
+        
+        .listTicket{
+            width: 80%;
+            margin: auto;
+        }
+        
+        tr{
+            th{
+                width: 30%;
+                
+                &.mediumCase{
+                    width: 17%;
+                }
+                
+                &.littleCase{
+                    width: 6%;
+                }
+            }
+            
+            td{
+                vertical-align: middle;
+            }
+        }
+    }
+}

@@ -1,0 +1,1013 @@
+/* CSS GLOBAL */
+@font-face {
+    font-family: metaNormal;
+    src: url(../fonts/MetaPro-Normal.otf);
+}
+
+@font-face {
+    font-family: metaMedium;
+    src: url(../fonts/MetaPro-Medium.otf);
+}
+
+@font-face {
+    font-family: metaBold;
+    src: url(../fonts/MetaPro-Bold.otf);
+}
+
+html *{
+    font-family: metaNormal;
+}
+
+html, body{
+    font-size: 14px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+a.disabled {
+    pointer-events: none;
+    
+    &:hover {
+        color: initial;
+        text-decoration: none;
+    }
+    
+    &:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+h4{
+    font-size: 1.1rem;
+}
+
+.row{
+    max-width: 100%;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.active{
+    display: block !important;
+}
+
+.disables{
+    display: none !important;
+}
+
+.show{
+    opacity: 1;
+    @include transition(all, 0.5);
+}
+
+.hide{
+    opacity: 0;
+    @include transition(all, 0.5);
+}
+
+.floatL{
+    float: left;
+}
+
+.floatR{
+    float: right;
+}
+
+.white{
+    color: #FFFFFF;
+}
+
+.bgWhite{
+    background-color: #FFFFFF;
+}
+
+.black{
+    color: #222222;
+}
+
+.blue{
+    color: #00CFFF;
+}
+
+.red{
+    color: #D0021B;
+}
+
+.gray{
+    color: #ABAECD;
+}
+
+.bgGray{
+    background-color: #FAFAFA;
+}
+
+.pennant{
+    max-height: 70px;
+    max-width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quotation{
+    font-size: 1.2rem;
+    font-family: metaMedium;
+    margin-bottom: 0;
+}
+
+
+/* CSS HEADER */
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 40px 0;
+    
+    *{
+        display: inline-block;
+    }
+    
+    a{
+        margin-left: 100px;
+    }
+    
+    h1{
+        font-size: 2.2rem;   
+    }
+    
+    >h2{
+        font-size: 1.2rem;
+        margin-left: 2%;
+    }
+}
+
+.page header{
+    background-color: #0F2839;
+}
+
+a {
+    img.arrowReturn{
+        width: 25px;
+        position: absolute;
+        top: 53px;
+        left: 40px;
+        z-index: 10;
+    }
+    
+    svg{
+        position: absolute;
+        top: 37px;
+        left: 27px;
+        z-index: 10;
+        opacity: 0;
+    }
+}
+
+/* CSS MENU */
+.menu{
+    .contentMenu{
+        ul.menuAdmin{
+            float: left;
+            margin-left: 40px;
+
+            li{
+                float: left;
+                margin-right: 35px;
+            }
+        }
+    }
+
+
+    .contentLogout{
+        ul.logout{
+            float: right;
+            margin-right: 40px;
+
+            li{
+                float: right;
+                margin-left: 35px;
+            }
+        }
+    }
+}
+
+
+/* CSS FOOTER */
+footer{
+    padding: 15px;
+    
+    >div{
+        @include flex();
+        @include flexDirection(row);
+        @include justifyContent(center);
+        margin-bottom: 15px;
+        
+        p{
+            margin: 0 15px;
+        }
+    }
+}
+
+
+/* CSS page login */
+.connexion{
+    overflow: hidden;
+    
+    section.content{
+        padding-top: 150px;
+        
+        section.contentConnect{
+            @include translate(0, 40);
+            
+            div.formLogin{
+                width: 300px;
+                margin: auto;
+                
+                input{
+                    border-radius: 5px;
+                    padding: 0.5rem 0.5rem 0.3rem;
+                }
+                
+                div.submit{
+                    margin-top: 30px;
+                    
+                    input{
+                        @include btnSubmit();
+                    }
+                }
+            }
+        }
+    }
+    
+    footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+/* CSS page 404 */
+.page404 {
+    
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    section.introPage404{
+        padding-top: 140px;
+
+        h4{
+            margin-top: 200px;
+        }
+    }
+}
+
+/* CSS CGU */
+.cgu section.content{
+    padding-top: 140px;
+    
+    >section{
+        >*{
+            width: 50%;
+            margin: auto;
+        }
+        
+        >h2{
+            margin: 50px auto 40px;
+        }
+        
+        p{
+            margin: 10px auto 30px;
+        }
+        
+        &.introCGU{
+            @include linearGradient(#FFFFFF, #EEEEEE);
+            
+        }
+        
+        &.detailsCGU{
+            @include linearGradient(#EEEEEE, #FFFFFF);
+        }
+    }
+}
+
+
+/* CSS PRONO DAY */
+.pronoDay{
+    >div.matchOfTheDay{
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        position: relative;
+        z-index: 2;
+    }
+    
+    >img.roundBorder{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 3;
+    }
+}
+
+
+/* CSS CARD MATCH and CSS CARD DETAILS MATCH */
+.cardMatch{
+    @include card();
+    
+    >div.row{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    img.iconReliability{
+        height: 20px;
+        margin-bottom: 15px;
+        
+        &.iconFun{
+            height: 25px;
+            margin-top: -5px;
+        }
+    }
+    
+    p.quotation{
+        @include quotation();
+    }
+}
+
+.home .matchOfTheDay .cardMatch{
+    -webkit-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+    box-shadow:0 0 2px 0px rgba(0,0,0,0.5);
+    
+    &:hover{
+        @include cardHover(0, 0, 2, 0.5);
+    }
+}
+
+.cardDetailsMatch{
+    @include card();
+    margin-bottom: 80px;
+    
+    >div.row{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    p.quotation{
+        @include quotation();
+        margin-bottom: 25px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        line-height: 50px;
+    }
+    
+    h3{
+        font-size: 1.5rem;
+    }
+    
+    div.analysis>p{
+        padding: 10px 40px;
+    }
+}
+
+.home .cardMatch:hover,
+.home .cardTicket:hover{
+    @include cardHover(0, 5, 10, 0.15);
+}
+
+/* CSS CARD TICKET */
+.cardTicket{
+    -webkit-box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    -ms-box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 1px #d0d8df, 0 1px 3px rgba(0,0,0,0.15);
+    padding-top: 5px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    
+    @include transition(all, 0.2);
+    
+    div{
+        .row.match{
+            margin-left: auto;
+            margin-right: auto;
+
+            >div{
+                padding: 0;
+            }
+
+            img.pennant{
+                max-height: 50px;
+                max-width: 50px;
+            }
+
+            p.nameTeam{
+                font-size: 0.7rem;
+            }
+        }
+        
+        &.globaleQuotation{
+            @include flex();
+            margin: 30px 0 0 -1px;
+            
+            p.titleQuotation{
+                line-height: 50px;
+                font-size: 1rem;
+                margin: 0;
+                padding: 0 20px 0 30px;
+            }
+            
+            p.quotation{
+                border-radius: 0 50% 50% 0;
+                line-height: 50px;
+                padding-right: 25px;
+                margin-left: -1px;
+            }
+        }
+        
+        &.bgWhite,
+        &.bgGray{
+            padding: 10px 0 0;
+        }
+    }
+    
+    >div:last-child{
+        border-radius: 0px 0px 5px 5px;
+    }
+}
+
+
+/* CSS MACTH */
+.match{
+    >div.col-xs-4{
+        @include flex();
+        @include flexDirection(column);
+        @include justifyContent(flex-end);
+        min-height: 125px;
+    }
+    
+    img.check{
+        width: 35px;
+        position: absolute;
+        top: 10%;
+        z-index: 10;
+        @include translate(-50, -50);
+        
+        &.home{
+            left: 35%;
+        }
+        
+        &.vs{
+            left: 50%;
+            font-size: 1.4rem;
+            font-family: metaBold;
+            line-height: 100px;
+        }
+        
+        &.away{
+            left: 65%;
+        }
+    }
+    
+    p.nameTeam{
+        margin-top: 15px;
+        max-height: 22px;
+    }
+    
+    span.vs{
+        font-size: 1.4rem;
+        font-family: metaBold;
+        line-height: 100px;
+    }
+    
+    span.result{
+        font-size: 1.6rem;
+    }
+}
+
+
+/* CSS round number */
+.ranking h3{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.lastResults h6{
+    margin-bottom: 30px;
+}
+
+.rankingTeams{
+    >div{
+        padding: 0 3px;
+        min-height: 200px;
+        @include flex();
+    }
+}
+
+.winTeams{
+    >div{
+        >div{
+            @include statsContent();
+            
+            >div.divTeamWin{
+                @include statsContent();
+                min-height: 180px;
+                
+                p.homeWin{
+                    border-radius: 50%;
+                }
+                
+                p.draws{
+                    border-radius: 50%;
+                }
+                
+                p.awayWin{
+                    border-radius: 50%;
+                }
+            }
+            
+            &.divHomeWin{
+                margin: auto 5px auto auto;
+            }
+            
+            &.divAwayWin{
+                margin: auto auto auto 5px;
+            }
+            
+            p.legendeTeam{
+                width: 300%;
+            }
+        }
+    }
+}
+
+.rankingTeams{
+    >div{
+        >p.homeRanking{
+            margin: auto 5px auto auto;
+            border-radius: 50%;
+        }
+        
+        >p.awayRanking{
+            margin: auto auto auto 5px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.rankingFull{
+    margin: 30px 0;
+    
+    #headingRanking{
+        a{  
+            &.collapsed{
+                background-color: #FFFFFF;
+                color: #222222;
+            }
+            
+            @include button();
+        }
+    }
+    
+    &.panel-group{
+        div.panel{
+            margin: auto;
+            border: 0 none;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    
+    div.panel-default{
+        div.panel-heading{
+            margin: auto;
+            border: 0 none;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+            
+            &+div.panel-collapse{
+                >div.panel-body{
+                    border: 0 none;
+                }
+            }
+        }
+    }
+    
+    div.rankingFullDetails{
+        background-color: #FFFFFF;
+        padding: 50px 0;
+        position: relative;
+        top: 50px;
+        left: 0;
+        
+        &:before{
+            content:"\A";
+            border-style: solid;
+            border-width: 20px;
+            border-color: transparent transparent #FFFFFF transparent;
+            position: absolute;
+            top: -40px;
+            left: 48.5%;
+        }
+        
+        div.categorieRanking{
+            width: 70%;
+            margin: auto;
+            @include flex();
+            @include flexDirection(row);
+            @include justifyContent(space-around);
+            
+            p.general{
+                @include flexSize(7.5);
+            }
+            
+            p.stats{
+                @include flexSize(2);
+            }
+        }
+        
+        table.table{
+            border: none;
+            width: 70%;
+            margin: auto;
+            
+            >tbody{
+                >tr{
+                    th{
+                        border: none;
+                        width: 5%;
+                        
+                        &.mediumCase{
+                            width: 9%;
+                        }
+                        
+                        &.bigCase{
+                            width: 13%;
+                        }
+                        
+                        &.borderR{
+                            border-right: 1px solid #DDDDDD;
+                        }
+                    }
+                    
+                    td{
+                        padding: 10px 8px;
+                        
+                        &.borderR{
+                            border-right: 1px solid #DDDDDD;
+                        }
+                    }
+                    
+                    &:nth-child(0n+1){
+                        &:hover{
+                            background: none;
+                        }
+                    }
+                    
+                    &:nth-child(2n+1){
+                        background-color: #FFFFFF;
+                    }
+                    
+                    &:nth-child(2n){
+                        background-color: #FBFBFB;
+                    }
+                    
+                    &:hover{
+                        background-color: #DDDDDD;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.statsFull{
+    margin: 30px 0;
+    
+    #headingStats{
+        a{  
+            &.collapsed{
+                background-color: #FFFFFF;
+                color: #222222;
+            }
+            
+            @include button();
+        }
+    }
+    
+    &.panel-group{
+        div.panel{
+            margin: auto;
+            border: 0 none;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    
+    div.panel-default{
+        div.panel-heading{
+            margin: auto;
+            border: 0 none;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+            
+            &+div.panel-collapse{
+                >div.panel-body{
+                    border: 0 none;
+                }
+            }
+        }
+    }
+    
+    div.statsFullDetails{
+        background-color: #FFFFFF;
+        padding: 50px 0;
+        position: relative;
+        top: 50px;
+        left: 0;
+        
+        &:before{
+            content:"\A";
+            border-style: solid;
+            border-width: 20px;
+            border-color: transparent transparent #FFFFFF transparent;
+            position: absolute;
+            top: -40px;
+            left: 48.5%;
+        }
+        
+        table.table{
+            border: none;
+            width: 40%;
+            margin: auto;
+            
+            >tbody{
+                >tr{
+                    th{
+                        border: none;
+                        width: 5%;
+                    }
+                    
+                    td{
+                        &.mobile{
+                            display: none;
+                        }
+                        
+                        &.bigCase{
+                            width: 26%;
+                        }
+                        
+                        &.mediumCase{
+                            width: 15%;
+                        }
+                        
+                        &.smallCase{
+                            width: 12%;
+                        }
+                        
+                        &.roundCase{
+                            width: 10%;
+                            padding: 0;
+                            vertical-align: middle;
+                        }
+                    }
+                    
+                    &:first-child{
+                        >td{
+                            border: 0 none;
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: #DDDDDD;
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*** CSS OLD MATCHS BY TEAM ***/
+.lastResultsTeams{
+    table.table{
+        tr{
+            &:hover{
+                background-color: #DDDDDD;
+            }
+            &.oldMatch{
+                display: none;
+
+                &[data-match="0"]{
+                    display: table-row;
+                }
+
+                td{
+                    &.mobile{
+                        display: none;
+                    }
+                    
+                    &.bigCase{
+                        width: 25%;
+                    }
+
+                    &.mediumCase{
+                        width: 20%;
+                    }
+
+                    &.smallCase{
+                        width: 10%;
+                    }
+                }
+            }
+            
+            td{
+                &.roundCase{
+                    padding: 0;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    
+    span.moreOldMatchs{
+        text-decoration: underline;
+        
+        &:hover{
+            color: #00CFFF;
+            text-decoration: none;
+        }
+    }
+    
+    div{
+        div{
+            h6{
+                margin-bottom: 30px;
+            }
+        }
+        
+        &.legend{
+            @include flex();
+            @include flexDirection(row);
+            @include justifyContent(center);
+            margin-top: 15px;
+            
+            p{
+                margin: 0 15px;
+                
+                &:before{
+                    content: '\25CF';
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 1.6rem;
+                    padding: 0 2px;
+                    margin-right: 5px;
+                }
+                
+                &.legendWin{
+                    &:before{
+                        color: #1ED711;
+                    }
+                }
+                
+                &.legendDrawn{
+                    &:before{
+                        color: #222222;
+                    }
+                }
+                
+                &.legendDefeat{
+                    &:before{
+                        color: #D0021B;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/********** NATIF CAKEPHP **********/
+/** Notices and Errors **/
+.cake-error,
+.cake-debug,
+.notice,
+p.error,
+p.notice {
+  display: block;
+  clear: both;
+  background-repeat: repeat-x;
+  margin-bottom: 18px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.cake-debug,
+.notice,
+p.notice {
+  color: #000000;
+  background: #ffcc00;
+}
+
+.cake-error,
+p.error {
+  color: #fff;
+  background: #C3232D;
+}
+
+pre {
+  background: none repeat scroll 0% 0% #FFF;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin: 15px 0px;
+  color: rgba(0, 0 ,0 , 0.74);
+  padding:5px;
+}
+
+.cake-error .cake-stack-trace {
+  margin-top:10px;
+}
+
+.cake-stack-trace code {
+  background: inherit;
+  border:0;
+}
+
+.cake-code-dump .code-highlight {
+  display: block;
+  background-color: #FFC600;
+}
+
+.cake-error a,
+.cake-error a:hover {
+  color:#fff;
+  text-decoration: underline;
+}
+
+.home .checks {
+  padding:30px;
+  color: #626262;
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-top:50px;
+}
+
+.checks.platform {
+  background-color: #B7E3EC;
+}
+
+.checks.filesystem {
+  background: #DCE47E;
+}
+
+.checks.database {
+  background-color: #DFF0D8;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.home .checks .success:before, .home .checks .problem:before {
+  line-height: 0px;
+  font-size: 2rem;
+  height: 12px;
+  width: 12px;
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  left: -11px;
+}
+
+.home .checks .success:before {
+  content: "✓";
+  color: green;
+  margin-right: 9px;
+}
+
+.home .checks .problem:before {
+  content: "✘";
+  color: red;
+  margin-right: 9px;
+}
