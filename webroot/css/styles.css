@@ -7053,7 +7053,7 @@ h4 {
 
 .pennant {
   max-height: 70px;
-  max-width: 70px;
+  width: auto;
   margin-left: auto;
   margin-right: auto; }
 
